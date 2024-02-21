@@ -7,23 +7,23 @@ public class StatsServiceTest {
 
     @Test
     public void SumSalesTest() {
-        StatsService service = new StatsService();
-        long[] Sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        statsService service = new statsService();
+        long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
         long expectedSumSales = 180;
-        long actualSumSales = service.SumSales(Sales);
+        long actualSumSales = service.sumSales(sales);
 
 
         Assertions.assertEquals(expectedSumSales, actualSumSales);
     }
 
     @Test
-    public void AverageValueSalesTest() {
-        StatsService service = new StatsService();
-        long[] Sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+    public void averageValueSalesTest() {
+        statsService service = new statsService();
+        long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
         long expectedAverageValueSales = 15;
-        long actualAverageValueSales = service.AverageValueSales(Sales);
+        long actualAverageValueSales = service.averageValueSales(sales);
 
 
         Assertions.assertEquals(expectedAverageValueSales, actualAverageValueSales);
@@ -31,11 +31,11 @@ public class StatsServiceTest {
 
     @Test
     public void maxSalesTest() {
-        StatsService service = new StatsService();
-        long[] Sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        statsService service = new statsService();
+        long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
         long expectedMaxSales = 8;
-        long actualMaxSales = service.maxSales(Sales);
+        long actualMaxSales = service.maxSales(sales);
 
 
         Assertions.assertEquals(expectedMaxSales, actualMaxSales);
@@ -44,11 +44,11 @@ public class StatsServiceTest {
 
     @Test
     public void minSalesTest() {
-        StatsService service = new StatsService();
-        long[] Sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        statsService service = new statsService();
+        long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
         long expectedMinSales = 9;
-        long actualMinSales = service.minSales(Sales);
+        long actualMinSales = service.minSales(sales);
 
 
         Assertions.assertEquals(expectedMinSales, actualMinSales);
@@ -56,11 +56,11 @@ public class StatsServiceTest {
 
     @Test
     public void BelowAverageValueTest() {
-        StatsService service = new StatsService();
-        long[] Sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        statsService service = new statsService();
+        long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
         long expectedBelowAverageValueSales = 5;
-        long actualBelowAverageValueSales = service.BelowAverageValueSales(Sales);
+        long actualBelowAverageValueSales = service.BelowAverageValueSales(sales);
 
 
         Assertions.assertEquals(expectedBelowAverageValueSales, actualBelowAverageValueSales);
@@ -68,11 +68,11 @@ public class StatsServiceTest {
 
     @Test
     public void higherAverageValueTest() {
-        StatsService service = new StatsService();
-        long[] Sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        statsService service = new statsService();
+        long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
         long expectedHigherAverageValueSales = 5;
-        long actualHigherAverageValueSales = service.higherAverageValueSales(Sales);
+        long actualHigherAverageValueSales = service.higherAverageValueSales(sales);
 
 
         Assertions.assertEquals(expectedHigherAverageValueSales, actualHigherAverageValueSales);
