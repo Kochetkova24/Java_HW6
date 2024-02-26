@@ -1,6 +1,6 @@
 package ru.netology.stats.services;
 
-public class statsService {
+public class StatsService {
 
     public long sumSales(long[] sales) {
         int sum = 0;
@@ -44,7 +44,7 @@ public class statsService {
     }
 
 
-    public long BelowAverageValueSales(long[] sales) {
+    public long belowAverageValueSales(long[] sales) {
         long avg = averageValueSales(sales);
         int month = 0;
         for (long sale : sales) {
@@ -55,6 +55,7 @@ public class statsService {
         }
         return month;
     }
+
     public long higherAverageValueSales(long[] sales) {
         long avg = averageValueSales(sales);
         int month = 0;

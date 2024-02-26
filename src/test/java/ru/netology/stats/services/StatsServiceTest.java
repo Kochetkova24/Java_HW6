@@ -3,11 +3,11 @@ package ru.netology.stats.services;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-public class statsServiceTest {
+public class StatsServiceTest {
 
     @Test
-    public void SumSalesTest() {
-        statsService service = new statsService();
+    public void sumSalesTest() {
+        StatsService service = new StatsService();
         long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
         long expectedSumSales = 180;
@@ -19,7 +19,7 @@ public class statsServiceTest {
 
     @Test
     public void averageValueSalesTest() {
-        statsService service = new statsService();
+        StatsService service = new StatsService();
         long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
         long expectedAverageValueSales = 15;
@@ -31,7 +31,7 @@ public class statsServiceTest {
 
     @Test
     public void maxSalesTest() {
-        statsService service = new statsService();
+        StatsService service = new StatsService();
         long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
         long expectedMaxSales = 8;
@@ -44,7 +44,7 @@ public class statsServiceTest {
 
     @Test
     public void minSalesTest() {
-        statsService service = new statsService();
+        StatsService service = new StatsService();
         long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
         long expectedMinSales = 9;
@@ -55,12 +55,12 @@ public class statsServiceTest {
     }
 
     @Test
-    public void BelowAverageValueTest() {
-        statsService service = new statsService();
+    public void belowAverageValueTest() {
+        StatsService service = new StatsService();
         long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
         long expectedBelowAverageValueSales = 5;
-        long actualBelowAverageValueSales = service.BelowAverageValueSales(sales);
+        long actualBelowAverageValueSales = service.belowAverageValueSales(sales);
 
 
         Assertions.assertEquals(expectedBelowAverageValueSales, actualBelowAverageValueSales);
@@ -68,7 +68,7 @@ public class statsServiceTest {
 
     @Test
     public void higherAverageValueTest() {
-        statsService service = new statsService();
+        StatsService service = new StatsService();
         long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
         long expectedHigherAverageValueSales = 5;
